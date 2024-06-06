@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<h1>Contact Us</h1>
+<p>Send us a message regarding your web needs.</p>
+<br>
+<form method="post">
+    {% csrf_token %}
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" style="width: 250px;"><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" style="width: 250px;"><br>
+    <label for="message">Message:</label> <br>
+    <textarea id="message" name="message" cols="90" rows="10" style="width: 500px"></textarea><br>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
